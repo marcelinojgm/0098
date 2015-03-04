@@ -100,7 +100,7 @@ public class DrawDemo
     }
     
     /**
-     * dibuja un trinagulo a partir del punto indicado
+     * dibuja un trinagulo verde a partir del punto indicado
      * @param y posicion del eje y para empezar a dibujar
      * @param x posicion del eje x para empezar a dibujar
      */
@@ -112,5 +112,20 @@ public class DrawDemo
             pen.turn(-120);
         }
     
+    }
+    
+    /**
+     * dibuja un poligono regular de n lados
+     * @param n numero de lados del poligono
+     */
+    public void drawPolygon(int n){
+        int angle = 360/n;
+        Pen pen = new Pen(200, 10, myCanvas);
+        pen.setColor(Color.BLACK);
+          for (int i=0; i<n; i++) {
+            pen.move(50);
+            pen.turn(angle);
+        }
+        
     }
 }
