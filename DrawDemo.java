@@ -96,8 +96,21 @@ public class DrawDemo
             pen.move(60);
             pen.turn(-72);
         }
-       
-        
-       
+                    
+    }
+    
+    /**
+     * dibuja un trinagulo a partir del punto indicado
+     * @param y posicion del eje y para empezar a dibujar
+     * @param x posicion del eje x para empezar a dibujar
+     */
+    public void drawTriangle(int y, int x){
+        Pen pen = new Pen(x, y, myCanvas);
+        pen.setColor(Color.GREEN);
+          for (int i=0; i<3; i++) {
+            pen.move(60);
+            pen.turn(-120);
+        }
+    
     }
 }
